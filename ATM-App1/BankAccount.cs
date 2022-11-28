@@ -79,5 +79,30 @@ namespace ATM_App1
         }
 
 
+        public double CheckBalance()
+        {
+            return Balance;
+        }
+
+        public bool Withdraw(double amount)
+        {
+            if (amount <= Balance)
+            {
+                Balance = Balance - amount;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        public double Deposit(double amount)
+        {
+            Balance += amount;
+            return Balance;
+        }
+
     }
 }
